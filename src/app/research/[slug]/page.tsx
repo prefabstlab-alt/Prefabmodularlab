@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { getAllResearch, getResearchBySlug } from "@/lib/research";
+import Comments from "@/components/Comments";
 
 export async function generateStaticParams() {
   return getAllResearch().map((p) => ({ slug: p.slug }));
@@ -70,6 +71,8 @@ export default async function ResearchDetail({
         className="mt-10 leading-relaxed text-slate-800 [&>h2]:mt-10 [&>h2]:font-montserrat [&>h2]:text-xl [&>h2]:font-semibold [&>h2]:text-primary [&>h3]:mt-8 [&>h3]:font-montserrat [&>h3]:text-lg [&>h3]:font-semibold [&>h3]:text-primary [&>p]:mt-4 [&>ul]:mt-4 [&>ul]:list-disc [&>ul]:pl-6 [&>ol]:mt-4 [&>ol]:list-decimal [&>ol]:pl-6 [&_li]:mt-1"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
+
+      <Comments term={post.slug} />
     </main>
   );
 }
