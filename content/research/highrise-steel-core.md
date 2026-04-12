@@ -5,6 +5,7 @@ category: "모듈러 건축"
 thumbnail: "/images/research/highrise-steel-core.png"
 tags: ["중고층 모듈러", "프리팹 철골코어", "횡력저항시스템", "Tekla Structures"]
 period: "2023.03~현재"
+featured: true
 ---
 
 ## 연구 배경

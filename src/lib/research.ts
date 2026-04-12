@@ -20,6 +20,7 @@ export type ResearchFrontmatter = {
   thumbnail?: string;
   tags?: string[];
   period?: string;
+  featured?: boolean;
 };
 
 export type ResearchSummary = ResearchFrontmatter & {
@@ -66,6 +67,7 @@ function readResearchFile(filename: string): ResearchSummary | null {
     thumbnail: resolveThumbnail(fm.thumbnail),
     tags: fm.tags ?? [],
     period: fm.period,
+    featured: fm.featured === true,
   };
 }
 
@@ -78,7 +80,11 @@ export function getAllResearch(): ResearchSummary[] {
     .readdirSync(RESEARCH_DIR)
     .map(readResearchFile)
     .filter((x): x is ResearchSummary => x !== null);
-  entries.sort((a, b) => (a.date < b.date ? 1 : -1));
+  entries.sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    return a.date < b.date ? 1 : -1;
+  });
   return entries;
 }
 
@@ -116,6 +122,7 @@ export async function getResearchBySlug(
     thumbnail: resolveThumbnail(fm.thumbnail),
     tags: fm.tags ?? [],
     period: fm.period,
+    featured: fm.featured === true,
     contentHtml: processed.toString(),
   };
 }
