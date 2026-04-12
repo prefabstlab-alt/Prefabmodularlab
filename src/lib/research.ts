@@ -92,6 +92,17 @@ export function getLatestResearch(limit = 6): ResearchSummary[] {
   return getAllResearch().slice(0, limit);
 }
 
+export function getFeaturedResearch(): ResearchSummary | null {
+  const featured = getAllResearch().find((p) => p.featured);
+  return featured ?? null;
+}
+
+export function getLatestNonFeatured(limit = 4): ResearchSummary[] {
+  return getAllResearch()
+    .filter((p) => !p.featured)
+    .slice(0, limit);
+}
+
 export function getResearchByCategory(): Record<
   ResearchCategory,
   ResearchSummary[]

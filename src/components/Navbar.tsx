@@ -26,6 +26,15 @@ const NAV: NavItem[] = [
       { label: "특허 및 기타", href: "/patents" },
     ],
   },
+  { label: "보유 기술", href: "/technology" },
+  {
+    label: "기술협력 문의",
+    children: [
+      { label: "R&D 협력", href: "/collaboration/rnd" },
+      { label: "기술이전", href: "/collaboration/licensing" },
+      { label: "기술세미나 및 교육", href: "/collaboration/seminar" },
+    ],
+  },
   {
     label: "Board",
     children: [
