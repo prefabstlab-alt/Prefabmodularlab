@@ -5,7 +5,6 @@ import {
   getLatestNonFeatured,
 } from "@/lib/research";
 import ResearchCard from "@/components/ResearchCard";
-import { labStats } from "@/data/stats";
 
 const MASS_ITEMS = [
   { letter: "M", en: "Modular", kr: "모듈러" },
@@ -61,29 +60,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. STATS STRIP */}
-      <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto grid max-w-content grid-cols-2 gap-y-8 px-4 py-12 md:grid-cols-4 md:gap-y-0 md:py-14">
-          {labStats.map((stat) => (
-            <div
-              key={stat.label}
-              className="flex flex-col items-center border-slate-200 text-center md:border-l md:first:border-l-0"
-            >
-              <div className="font-montserrat text-4xl font-semibold tracking-tight text-primary md:text-5xl">
-                {stat.value}
-                <span className="ml-0.5 text-xl text-accent md:text-2xl">
-                  {stat.suffix}
-                </span>
-              </div>
-              <div className="mt-2 text-xs tracking-wide text-slate-500 md:text-sm">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 3. FEATURED RESEARCH SPOTLIGHT */}
+      {/* 2. FEATURED RESEARCH SPOTLIGHT */}
       {featured ? (
         <section className="mx-auto max-w-content px-4 pt-16 pb-10 md:pt-24 md:pb-14">
           <div className="mb-8 flex items-end justify-between gap-4">

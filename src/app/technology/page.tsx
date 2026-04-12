@@ -426,7 +426,7 @@ export default function TechnologyPage() {
             Related Research
           </p>
           <h2 className="mt-2 font-montserrat text-2xl font-semibold text-primary md:text-3xl">
-            관련 연구 성과
+            유사 연구 사례
           </h2>
         </header>
         <ul className="space-y-3">

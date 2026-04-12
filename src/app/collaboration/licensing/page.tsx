@@ -6,10 +6,10 @@ export const metadata = {
 
 const TRACK_RECORD = [
   {
-    year: "2021",
-    title: "이동형 학교 전문기업 기술이전",
+    year: "완료",
+    title: "모듈러 건축 전문 제작사 4개사 기술이전 완료",
     body:
-      "플랜엠(PlanM)에 AJ Modular System의 기술 이전을 완료하여 실제 건축 현장에서 본 기술을 상용화하였습니다.",
+      "AJ Modular System의 기술을 국내 모듈러 건축 전문 제작사 4개사에 이전하여 실제 건축 현장에서 본 기술이 상용화되고 있습니다.",
   },
   {
     year: "다수",
