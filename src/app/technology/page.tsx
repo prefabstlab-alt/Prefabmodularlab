@@ -204,7 +204,7 @@ export default function TechnologyPage() {
           <div className="mb-10 overflow-hidden rounded-lg border border-slate-200 bg-white">
             <div className="relative aspect-[16/9] w-full">
               <Image
-                src="/images/technology/aj-system-overview.png"
+                src="/images/technology/AJ_overview.jpg"
                 alt="AJ Modular System 전체 구성"
                 fill
                 sizes="(max-width: 1200px) 100vw, 1200px"
@@ -357,11 +357,12 @@ export default function TechnologyPage() {
         <div className="mb-10 overflow-hidden rounded-lg border border-slate-200">
           <div className="relative aspect-[16/9] w-full bg-bg-gray">
             <Image
-              src="/images/technology/aj-experiment.png"
+              src="/images/technology/Test_setup.gif"
               alt="AJ 시스템 구조 성능 실험"
               fill
               sizes="(max-width: 1200px) 100vw, 1200px"
               className="object-contain p-6"
+              unoptimized
             />
           </div>
         </div>
@@ -396,11 +397,12 @@ export default function TechnologyPage() {
         <div className="mx-auto grid max-w-content gap-10 px-4 py-16 md:grid-cols-[1.2fr_1fr] md:items-center md:py-24">
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-white/5">
             <Image
-              src="/images/technology/aj-construction.png"
+              src="/images/technology/aj_construction.gif"
               alt="AJ Modular System 실제 시공 현장"
               fill
               sizes="(max-width: 768px) 100vw, 55vw"
               className="object-cover"
+              unoptimized
             />
           </div>
           <div className="text-white">
